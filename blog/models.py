@@ -11,7 +11,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     publisher_date = models.DateTimeField(blank=True, null=True)
 
-    def publisher(self):
+    def publish(self):
         self.publisher_date = timezone.now()
         self.save()
 
